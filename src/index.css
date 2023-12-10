@@ -1,8 +1,7 @@
 body {
-  background-color: #000000;
   color: whitesmoke;
   margin: 0;
-  padding: 10px;
+  padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,26 +9,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 h3 {
-  color: #FF8BA0;
+  color: #ff8ba0;
 }
 h2 {
-  color: #E41F7B ;
+  color: #e41f7b;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+#root {
+  background-color: black;
+  color: azure;
 }
-img {
-  height: 44px;
-  width: 44px;
-}
-.mainLogo {
-  height: 80px;
-  width: 80px;
-  text-align: center;
-}
-.gif {
-  height: 500px;
-  width: 500px;
-  text-align: center;
+.reactbar {
+  background-color: black;
+  color: azure;
 }

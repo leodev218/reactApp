@@ -1,4 +1,16 @@
-import "./App.css";
+import Cards from "./components/Cards";
+
+
+const App = () => {
+  return (
+    <>
+      <Cards />
+    </>
+  );
+}
+
+export default App;
+/** import "./App.css";
 
 const welcomeText = <h1>Bienvenido a este sitio en desarrollo</h1>;
 const elementTest = <h1>Hola</h1>;
@@ -24,3 +36,4 @@ function App() {
 }
 
 export default App;
+*/

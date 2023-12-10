@@ -1,28 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { StrictMode } from 'react';
+import { StrictMode } from "react";
 import "./index.css";
 import App from "./App";
-import Button from "./components/Navbar";
-import Logo from "./components/Logo";
-import MainLogo from "./components/Logo";
-import Gif from "./components/Gif";
-import ClientCard from "./components/ClientCard";
-import { Posts } from "./posts/postTest";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ReactBar from "./components/ReactBar";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
-
-    <Logo />
-    <Gif />
-    <Posts />
-    <ClientCard />
-    <App/>
-    <MainLogo />
-    <Button  />
+    <ReactBar />
+    <App />
   </StrictMode>
-
 );
 
 // If you want to start measuring performance in your app, pass a function
