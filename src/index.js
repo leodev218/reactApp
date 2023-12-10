@@ -5,13 +5,17 @@ import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactBar from "./components/ReactBar";
-
+import ClientCard from "./components/ClientCard";
+import TableClient from "./components/TableClient"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
     <ReactBar />
     <App />
+    <TableClient />
+    <ClientCard />
+  
   </StrictMode>
 );
 

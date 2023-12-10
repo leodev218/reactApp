@@ -1,13 +1,14 @@
 import Cards from "./components/Cards";
-
+import Login from "./components/Login";
 
 const App = () => {
   return (
     <>
       <Cards />
+      <Login />
     </>
   );
-}
+};
 
 export default App;
 /** import "./App.css";
