@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { InputGroup, Input, Button } from "reactstrap";
+import '../controller/putClientStore.php';
 
 function ClientCard() {
   const [data, setData] = useState({ clients: [] });
@@ -25,7 +26,6 @@ function ClientCard() {
 
   function editClientStore(button, id, filter, status, param) {
     // Obtener el valor del campo de texto correspondiente al botón
-
     var i = document.getElementById(button).value;
 
     var url =
@@ -42,6 +42,7 @@ function ClientCard() {
     fetch(url)
       .then((response) => {
         console.log(i);
+        
         // Realizar acciones con la respuesta
       })
       .catch((error) => {
@@ -49,45 +50,40 @@ function ClientCard() {
       });
   }
 
-  let idCounter = "input";
-  let counter = 0;
-  let counter1 = 0;
-
   return (
     <>
-      {data.clients.map((client) => (
-        <div className="container w-100 h-100">
+      {data.clients.map((client, index) => (
+        <div className="container w-100 h-100" key={client.clientId}>
           <div className="row">
-		  <div className="card col-12 mt-1 p-2 rounded-0 bg-dark bg-opacity-10">
-            <div className="container m-3 CardClient" key={client.id}>
-              <InputGroup>
-                <Input
-                  id={idCounter + counter++}
-                  defaultValue={client.clientName}
-                />
-                <Button
-				className="btn btn-dark"
-                  onClick={() =>
-                    editClientStore(
-                      idCounter + counter1++,
-                      client.clientId,
-                      "clientName",
-                      "status",
-                      "client"
-                    )
-                  }
-                  
-                >
-                  Editar
-                </Button>
-              </InputGroup>
+            <div className="card col-12 mt-1 p-2 rounded-0 bg-dark bg-opacity-10">
+              <div className="container m-3 CardClient">
+                <InputGroup>
+                  <Input
+                    id={`input${index}`}
+                    defaultValue={client.clientName}
+                  />
+                  <Button
+                    className="btn btn-dark"
+                    onClick={() =>
+                      editClientStore(
+                        `input${index}`,
+                        client.clientId,
+                        "clientName",
+                        "status",
+                        "client"
+                      )
+                    }
+                  >
+                    Editar
+                  </Button>
+                </InputGroup>
 
-              <h2 className="text-dark">{client.lastName}</h2>
-              <h2 className="text-dark">{client.email}</h2>
-              <p className="text-dark">{client.key}</p>
+                <h2 className="text-dark">{client.lastName}</h2>
+                <h2 className="text-dark">{client.email}</h2>
+                <p className="text-dark">{client.key}</p>
+              </div>
             </div>
           </div>
-		  </div>
         </div>
       ))}
     </>

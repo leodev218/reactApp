@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Table } from "reactstrap";
 
-function ClientTable() {
+function ClientTable(props) {
   const [data, setData] = useState({ clients: [] });
 
   useEffect(() => {
@@ -23,7 +23,6 @@ function ClientTable() {
     fetchData();
   }, []); // El segundo argumento [] indica que useEffect se ejecuta solo una vez al montar el componente
 
-  
 
 
 
@@ -44,7 +43,7 @@ function ClientTable() {
               {data.clients.map((client) => (
                 <tbody>
                   <tr>
-                    <th className="text fs-6">{client.id}</th>
+                    <th className="text fs-6" key={client.clientId}>id</th>
                     <th className="text fs-6">{client.clientName}</th>
                     <th className="text fs-6">{client.lastName}</th>
                     <th className="text fs-6">{client.email}</th>

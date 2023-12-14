@@ -1,23 +1,21 @@
 <?php
 
-
-session_start();
-
-
+/*
 $clientId = $_GET['clientId'];
 $filter = $_GET['filter'];
 $value = $_GET['value'];
 $param = $_GET['param'];
-
+ */
 
 $url = "https://dev-kairosGateway.lugma.tech/kairosGateway/apiCore/v1/putExtClient/fL2jz91ptFMA3UwVkBbu/6WclAmsaP9H7SR2WmpDbl1OL9";
 
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
-    'filter' => $filter,
-    'value' => $value,
-    'param' => $param
+    'clientId' => "2e44d504",
+    'filter' => "clientName",
+    'value' => "client",
+    'param' => "test react-php"
 
 );
 

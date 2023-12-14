@@ -1,6 +1,6 @@
 import { GoTerminal } from "react-icons/go";
 
-export const Posts = () => {
+const Post = () => {
   return (
     <button
       onClick={() => {
@@ -9,7 +9,7 @@ export const Posts = () => {
         )
           .then((response) => response.json())
           .then((data) => console.log(data))
-          .catch((error) => console.log());
+          .catch(console.error());
       }}
     >
       <GoTerminal />
@@ -17,3 +17,4 @@ export const Posts = () => {
     </button>
   );
 };
+export default Post;
