@@ -31,7 +31,7 @@ function ClientTable(props) {
       <div className="container w-100 h-100">
         <div className="row">
           <div className="col-12 mt-1 p-2 rounded-0">
-            <Table borderless hover striped>
+            <Table borderless hover >
               <thead>
                 <tr>
                   <th>Id</th>
@@ -43,7 +43,7 @@ function ClientTable(props) {
               {data.clients.map((client) => (
                 <tbody>
                   <tr>
-                    <th className="text fs-6" key={client.clientId}>id</th>
+                    <th className="text fs-6" key={client.clientId}>{client.clientId}</th>
                     <th className="text fs-6">{client.clientName}</th>
                     <th className="text fs-6">{client.lastName}</th>
                     <th className="text fs-6">{client.email}</th>

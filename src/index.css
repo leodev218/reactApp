@@ -1,31 +1,27 @@
-body {
-  color: black;
-  margin: 0;
-  margin-bottom: 100px;
-  padding: 0;
-  height: 100vh;
-  background-color: black;
-}
-html {
-  background-color: #640644;
-  margin: 0;
-  
-}
 
 #root {
-  /*background-color: black; */
-  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
+height: 100%;
 }
 
-.headerForm {
+/* PAGES place-content: center;*/
+.home {
   background-color: black;
-  color: azure;
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
 }
+.default {
+  height: 100vh;
+}
+/* CLASSNAMES COMPONENTES*/
 .navbar {
   background-color: black;
 }
@@ -33,13 +29,13 @@ html {
   text-decoration: none;
   color: beige;
 }
-.home {
-  background-color: black;
-  height: 100vh;
-}
 .fontPrimary {
   color: #c2185c;
 }
 .fontSecondary {
 color: azure;
+}
+.imgCard {
+  height: 55%;
+  width: auto;
 }

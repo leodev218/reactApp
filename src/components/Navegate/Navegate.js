@@ -1,13 +1,21 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from "reactstrap";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Admin from "./pages/Admin";
-import Schedule from "./pages/Schedule";
-import Store from "./pages/Store";
-import logo from "../assets/img/kairos.png";
-import "../index.css";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Admin from "../pages/Admin";
+import Schedule from "../pages/Schedule";
+import Store from "../pages/Store";
+import logo from "../../assets/img/kairos.png";
+import "../../index.css";
 
 const Navegate = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -43,7 +51,9 @@ const Navegate = () => {
                   width: 40,
                 }}
               />
-              <h5 className="text-light text-align-center fs-4 ms-1 mt-2">Kairos Tower</h5>
+              <h5 className="text-light text-align-center fs-4 ms-1 mt-2">
+                Kairos Tower
+              </h5>
             </Link>
           </NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} className="me-2" />
@@ -84,11 +94,11 @@ const Navegate = () => {
           </Collapse>
         </Navbar>
         <Routes>
+          <Route path="/" exact element={<Home />} />
           <Route path="/profile" element={<Admin />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/store" element={<Store />} />
           <Route path="/about" element={<About />} />
-          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>

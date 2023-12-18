@@ -1,8 +1,14 @@
+import ClientTable from "../ui/TableClient";
+
 const Admin = () => {
   
   return (
    <>
-    <h1 className="card-title fs-4 text-dark">Admin</h1>
+   <div className="container-fluid">
+   <h1 className="card-title fs-4 text-dark">Admin</h1>
+    <ClientTable/>
+   </div>
+ 
    </>
   );
 }

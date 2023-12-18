@@ -7,8 +7,9 @@ import esLocale from "@fullcalendar/core/locales/es";
 import listPlugin from "@fullcalendar/list";
 
 function Calendar() {
+
   return (
-    <div className="container h-100 mb-4 mt-3 text-dark">
+    <div className="container mt-3 text-dark">
       <FullCalendar
         locale={esLocale}
         plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin, listPlugin]}

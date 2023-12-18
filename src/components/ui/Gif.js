@@ -1,15 +1,15 @@
-import Brand from "../assets/img/brand.gif"
+import Brand from "../../assets/img/brand.gif"
 
 const Gif = () =>{
     return (
         <>
       <img
-                className="d-flex"
+                className="container-fluid"
                 alt="Kairos Tower"
                 src={Brand}
                 style={{
-                  height:400,
-                  width: 400,
+                  height:350,
+                  width: 350,
                 }}
               />
         </>

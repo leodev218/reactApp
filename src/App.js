@@ -1,4 +1,4 @@
-import Navegate from "./components/Navegate";
+import Navegate from "./components/Navegate/Navegate";
 
 const App = () => {
   

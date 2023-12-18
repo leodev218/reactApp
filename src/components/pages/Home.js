@@ -1,18 +1,23 @@
 import React from "react";
-import Gif from "../Gif";
-import Post from "./Post";
+import Login from "../ui/Login";
+import Gif from "../ui/Gif"
 import "../../index.css";
 
 const Home = () => {
   return (
     <>
-      <div className="container-fluid home">
-        <h1 className="col align-text-center fontPrimary">Bienvenido, este es un sitio en desarrollo</h1>
-        <h2 className="col align-text-center fontSecondary">Muy pronto estaremos en funcionamiento</h2>
+      <div className="home">
         <Gif />
-       <Post/>
+        <Login />
       </div>
     </>
   );
 };
 export default Home;
+
+/**    <h1 className="fontPrimary">
+          Bienvenido, este es un sitio en desarrollo
+        </h1>
+        <h2 className="fontSecondary">
+          Muy pronto estaremos en funcionamiento
+        </h2> */
