@@ -3,7 +3,7 @@ const Store = () => {
   
   return (
    <>
-    <div className="container-fluid fs-4 text-dark">
+    <div className="default">
       <h1 className="tex-dark fs-2 ">Store</h1>
         <Cards/>
       </div>

@@ -6,10 +6,10 @@ import "../../index.css";
 const Home = () => {
   return (
     <>
-      <div className="home">
+      <section className="home">
         <Gif />
         <Login />
-      </div>
+      </section>
     </>
   );
 };
